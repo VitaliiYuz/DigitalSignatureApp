@@ -1,0 +1,59 @@
+﻿<Window x:Class="DigitalSignatureApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Digital Signature App" Height="500" Width="600">
+    <Grid Margin="10">
+        <!-- Поле для введення тексту -->
+        <TextBox Name="InputTextBox" Height="60" VerticalScrollBarVisibility="Auto" 
+                 TextWrapping="Wrap" Margin="0,10,0,394"
+                 Text="Enter text to sign..."
+                 Foreground="Gray"
+                 GotFocus="InputTextBox_GotFocus"
+                 LostFocus="InputTextBox_LostFocus" />
+
+        <!-- Кнопка підпису тексту -->
+        <Button Name="SignTextButton" Content="Sign Text" Width="100" Margin="0,80,0,0" 
+                VerticalAlignment="Top" HorizontalAlignment="Left" Click="SignTextButton_Click" />
+
+        <!-- Поле для відображення підпису тексту -->
+        <TextBox Name="TextSignatureBox" Height="60" VerticalScrollBarVisibility="Auto" 
+                 TextWrapping="Wrap" Margin="0,112,0,292" IsReadOnly="True" />
+
+        <!-- Кнопка для збереження підпису тексту у файл -->
+        <Button Name="SaveTextSignatureButton" Content="Save Text Signature" Width="150" 
+                Margin="120,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Click="SaveTextSignatureButton_Click" />
+
+        <!-- Вибір файлу для підпису -->
+        <Button Name="SelectFileButton" Content="Select File" Width="100" Margin="0,200,0,0" 
+                VerticalAlignment="Top" HorizontalAlignment="Left" Click="SelectFileButton_Click" />
+
+        <!-- Кнопка підпису файлу -->
+        <Button Name="SignFileButton" Content="Sign File" Width="100" Margin="120,200,0,0" 
+                VerticalAlignment="Top" HorizontalAlignment="Left" Click="SignFileButton_Click" />
+
+        <!-- Поле для відображення підпису файлу -->
+        <TextBox Name="FileSignatureBox" Height="60" VerticalScrollBarVisibility="Auto" 
+                 TextWrapping="Wrap" Margin="-10,232,10,172" IsReadOnly="True" />
+
+        <!-- Кнопка для збереження підпису файлу у файл -->
+        <Button Name="SaveFileSignatureButton" Content="Save File Signature" Width="150" 
+                Margin="240,200,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Click="SaveFileSignatureButton_Click" />
+
+        <!-- Кнопка для вибору файлу для перевірки -->
+        <Button Name="SelectVerifyFileButton" Content="Select File to Verify" Width="150" 
+                Margin="0,320,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Click="SelectVerifyFileButton_Click" />
+
+        <!-- Кнопка для вибору файлу підпису для перевірки -->
+        <Button Name="SelectSignatureFileButton" Content="Select Signature File" Width="150" 
+                Margin="160,320,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Click="SelectSignatureFileButton_Click" />
+
+        <!-- Кнопка для перевірки підпису -->
+        <Button Name="VerifySignatureButton" Content="Verify Signature" Width="150" 
+                Margin="320,320,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Click="VerifySignatureButton_Click" />
+    </Grid>
+</Window>
